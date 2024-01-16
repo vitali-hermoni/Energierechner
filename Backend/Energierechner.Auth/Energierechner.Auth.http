@@ -1,0 +1,6 @@
+@Energierechner.Auth_HostAddress = http://localhost:5240
+
+GET {{Energierechner.Auth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
