@@ -3,9 +3,58 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{636E38CC-D2D5-4BE6-83BA-F571B62A821F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{D5336AF0-248B-4D13-B2B5-B0B5AE87094F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{944AE6BF-A25C-47F4-8FB0-2A8E0261E5CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Energierechner.Auth", "Backend\Energierechner.Auth\Energierechner.Auth.csproj", "{EC911CBE-8821-4752-B8D3-890A6D752326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Energierechner.Service", "Backend\Energierechner.Service\Energierechner.Service.csproj", "{E1BA3B5C-6991-4F84-83E5-605A0CC899BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Energierechner.BlasorWasm", "Frontend\Energierechner.BlasorWasm\Energierechner.BlasorWasm.csproj", "{D6C9E5F3-8D9E-4073-AA76-8FB930D9AE4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Energierechner.SharedModels", "Libs\Energierechner.SharedModels\Energierechner.SharedModels.csproj", "{934AEF97-9CFA-479E-AF6E-6DAC88A0AEC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Energierechner.SharedMethods", "Libs\Energierechner.SharedMethods\Energierechner.SharedMethods.csproj", "{3AE2FA83-C140-4DF6-B8C6-E60686D9CD06}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC911CBE-8821-4752-B8D3-890A6D752326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC911CBE-8821-4752-B8D3-890A6D752326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC911CBE-8821-4752-B8D3-890A6D752326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC911CBE-8821-4752-B8D3-890A6D752326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1BA3B5C-6991-4F84-83E5-605A0CC899BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1BA3B5C-6991-4F84-83E5-605A0CC899BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1BA3B5C-6991-4F84-83E5-605A0CC899BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1BA3B5C-6991-4F84-83E5-605A0CC899BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C9E5F3-8D9E-4073-AA76-8FB930D9AE4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C9E5F3-8D9E-4073-AA76-8FB930D9AE4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C9E5F3-8D9E-4073-AA76-8FB930D9AE4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C9E5F3-8D9E-4073-AA76-8FB930D9AE4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{934AEF97-9CFA-479E-AF6E-6DAC88A0AEC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{934AEF97-9CFA-479E-AF6E-6DAC88A0AEC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{934AEF97-9CFA-479E-AF6E-6DAC88A0AEC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{934AEF97-9CFA-479E-AF6E-6DAC88A0AEC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE2FA83-C140-4DF6-B8C6-E60686D9CD06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE2FA83-C140-4DF6-B8C6-E60686D9CD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE2FA83-C140-4DF6-B8C6-E60686D9CD06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE2FA83-C140-4DF6-B8C6-E60686D9CD06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC911CBE-8821-4752-B8D3-890A6D752326} = {D5336AF0-248B-4D13-B2B5-B0B5AE87094F}
+		{E1BA3B5C-6991-4F84-83E5-605A0CC899BD} = {D5336AF0-248B-4D13-B2B5-B0B5AE87094F}
+		{D6C9E5F3-8D9E-4073-AA76-8FB930D9AE4A} = {636E38CC-D2D5-4BE6-83BA-F571B62A821F}
+		{934AEF97-9CFA-479E-AF6E-6DAC88A0AEC3} = {944AE6BF-A25C-47F4-8FB0-2A8E0261E5CF}
+		{3AE2FA83-C140-4DF6-B8C6-E60686D9CD06} = {944AE6BF-A25C-47F4-8FB0-2A8E0261E5CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {426A0563-AF52-4F42-B07B-35DE4DA51F4D}
