@@ -29,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Extension\" />
     <Folder Include="Services\IServices\" />
   </ItemGroup>
