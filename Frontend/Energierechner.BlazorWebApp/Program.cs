@@ -18,7 +18,7 @@ builder.Services.AddScoped<IBaseService, BaseService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenProvider, TokenProvider>();
 
-
+builder.Services.AddBlazorBootstrap();
 
 var app = builder.Build();
 
