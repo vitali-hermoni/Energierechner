@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>false</InvariantGlobalization>
+    <UserSecretsId>6110e470-2f8f-4c85-94dc-a946493616de</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,7 +31,12 @@
 
   <ItemGroup>
     <Folder Include="Extension\" />
-    <Folder Include="Services\IServices\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libs\Energierechner.SharedMethods\Energierechner.SharedMethods.csproj" />
+    <ProjectReference Include="..\..\Libs\Energierechner.SharedModels\Energierechner.SharedModels.csproj" />
   </ItemGroup>
 
 </Project>

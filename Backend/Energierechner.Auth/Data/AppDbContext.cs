@@ -1,6 +1,7 @@
 ﻿using Energierechner.Auth.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Energierechner.Auth.Data;
 
@@ -19,6 +20,6 @@ public class AppDbContext : IdentityDbContext<AppUser>
     {
 
         base.OnModelCreating(builder);
-
+        //builder.SeddData();
     }
 }

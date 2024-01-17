@@ -41,9 +41,6 @@ namespace Energierechner.Auth.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<Guid>("IdenKey")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -92,6 +89,25 @@ namespace Energierechner.Auth.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "841975d1-44c0-4918-81c5-73ce1fec0217",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "322dd132-4020-4658-836f-548893d6ce81",
+                            Email = "admin@energierechner.de",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            Name = "Admin",
+                            NormalizedEmail = "admin@energierechner.de",
+                            NormalizedUserName = "admin@energierechner.de",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGnstOu6A+tWY59XLsrRx833baQIt/kKVSQt5GDcK3RaBdr/wTDMy/cmw2KFQ0M4FA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "cdfb61fc-f0de-406a-969c-6bcecf3369f4",
+                            TwoFactorEnabled = false,
+                            UserName = "admin@energierechner.de"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -119,6 +135,15 @@ namespace Energierechner.Auth.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "08044b6c-5a02-4a62-8855-8c7a8637eb5f",
+                            ConcurrencyStamp = "ADMIN",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -206,6 +231,13 @@ namespace Energierechner.Auth.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "841975d1-44c0-4918-81c5-73ce1fec0217",
+                            RoleId = "08044b6c-5a02-4a62-8855-8c7a8637eb5f"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>

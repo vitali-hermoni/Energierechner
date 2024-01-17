@@ -31,7 +31,6 @@ namespace Energierechner.Auth.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IdenKey = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -157,6 +156,21 @@ namespace Energierechner.Auth.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[] { "08044b6c-5a02-4a62-8855-8c7a8637eb5f", "ADMIN", "Admin", "ADMIN" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "Name", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "841975d1-44c0-4918-81c5-73ce1fec0217", 0, "322dd132-4020-4658-836f-548893d6ce81", "admin@energierechner.de", false, false, null, "Admin", "admin@energierechner.de", "admin@energierechner.de", "AQAAAAIAAYagAAAAEGnstOu6A+tWY59XLsrRx833baQIt/kKVSQt5GDcK3RaBdr/wTDMy/cmw2KFQ0M4FA==", null, false, "cdfb61fc-f0de-406a-969c-6bcecf3369f4", false, "admin@energierechner.de" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[] { "08044b6c-5a02-4a62-8855-8c7a8637eb5f", "841975d1-44c0-4918-81c5-73ce1fec0217" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
