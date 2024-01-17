@@ -3,6 +3,7 @@ using Energierechner.Auth.Models;
 using Energierechner.Auth.Services;
 using Energierechner.Auth.Services.IServices;
 using Energierechner.SharedMethods.Extensions;
+using Energierechner.SharedModels.Utilities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +14,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AppDbContext>(option =>
 {
-    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), builder =>
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException(ConstStrings.ConnectionStringNotFound), builder =>
     {
         //builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
     });
