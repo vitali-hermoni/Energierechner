@@ -1,4 +1,7 @@
+using Energierechner.Service.Data;
 using Energierechner.SharedMethods.Extensions;
+using Energierechner.SharedModels.Utilities;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-//builder.AddSeriLog();
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException(ConstStrings.ConnectionStringNotFound));
+});
+
+
+builder.AddSeriLog();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
