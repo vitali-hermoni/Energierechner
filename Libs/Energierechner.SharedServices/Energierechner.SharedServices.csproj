@@ -12,9 +12,9 @@
 		<PackageReference Include="Serilog.Sinks.MSSqlServer" Version="6.5.0" />
 	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Energierechner.SharedMethods\Energierechner.SharedMethods.csproj" />
-    <ProjectReference Include="..\Energierechner.SharedModels\Energierechner.SharedModels.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="\\Mac\Projekte\Energierechner\Libs\Energierechner.SharedMethods\Energierechner.SharedMethods.csproj" />
+	  <ProjectReference Include="\\Mac\Projekte\Energierechner\Libs\Energierechner.SharedModels\Energierechner.SharedModels.csproj" />
+	</ItemGroup>
 
 </Project>

@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Libs\Energierechner.SharedServices\Energierechner.SharedServices.csproj" />
+    <ProjectReference Include="\\Mac\Projekte\Energierechner\Libs\Energierechner.SharedServices\Energierechner.SharedServices.csproj" />
+    <ProjectReference Include="\\Mac\Projekte\Energierechner\Libs\Energierechner.SharedServices\Energierechner.SharedServices.csproj" />
   </ItemGroup>
 
 </Project>
